@@ -5,8 +5,6 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 from dbconfig import User
 from config import *
 
-admin_id = 540862135
-
 class MyLongPoll(VkBotLongPoll):
     def listen(self):
         while True:
