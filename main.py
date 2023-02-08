@@ -16,8 +16,8 @@ class MyLongPoll(VkBotLongPoll):
 
 class Bot:
     def __init__(self):
-        self.vk_session = vk_api.VkApi(token="vk1.a.7tnwp9MBsY3D4Yq_WS5YCrvrWJhB-HzsisSOzgTVaYodSdluVj5KGFcyfyfY0fQd2cKg3S-MJ2MlWRQPbV03DHUbz48i55o1E3Yt5jK0JR3JqPgvf1I4E1etr-RLXBs7tPysX8DuwtBThG30JMehHqVAKMdNNqPcRyp4hI6jh-plRQKNfe6MyKPqQEDjhT6uvcDb9Cvtgr9Ssw8LGnRW_w")
-        self.longpoll = MyLongPoll(self.vk_session, 218106561)
+        self.vk_session = vk_api.VkApi(token='')
+        self.longpoll = MyLongPoll(self.vk_session, GROUPID)
     def run (self):
         for event in self.longpoll.listen():
             if event.type == VkBotEventType.MESSAGE_NEW:
